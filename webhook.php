@@ -6,8 +6,5 @@ if ($verify_token === 'abc123') {
 echo $challenge;
 }
 
-$input = json_decode(file_get_contents('php://input'), true);
-error_log(print_r($input, true));
- 
-echo "hola"
-?>
+//$input = json_decode(file_get_contents('php://input'), true);
+//error_log(print_r($input, true));
