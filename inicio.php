@@ -62,4 +62,3 @@
 </script>
 <button onclick="myFacebookLogin()">Login with Facebook</button>
 <ul id="list"></ul>
-  ?>
