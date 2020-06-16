@@ -6,5 +6,5 @@ if ($verify_token === 'crmDanny2020') {
 echo $challenge;
 }
 
-//$input = json_decode(file_get_contents('php://input'), true);
+$input = json_decode(file_get_contents('php://input'), true);
 //error_log(print_r($input, true));
