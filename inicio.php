@@ -56,7 +56,7 @@
           ul.appendChild(li);
         }
       });
-    }, {scope: 'pages_manage_ads','leads_retrieval'});
+    }, {scope: 'pages_manage_ads,leads_retrieval'});
   }
 </script>
 <button onclick="myFacebookLogin()">Iniciar sesión en Facebook</button>
