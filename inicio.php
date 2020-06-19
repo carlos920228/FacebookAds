@@ -3,10 +3,12 @@
   
 <h2>DannyyeSoft</h2>
 
+<h2>My Platform</h2>
+
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '2065408253704710',
+      appId      : '277807966603862',
       xfbml      : true,
       version    : 'v2.12'
     });
@@ -60,5 +62,5 @@
     }, {scope: 'manage_pages'});
   }
 </script>
-<button onclick="myFacebookLogin()">Login with Facebook</button>
+<button onclick="myFacebookLogin()">Iniciar sesión en Facebook</button>
 <ul id="list"></ul>
