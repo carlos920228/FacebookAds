@@ -2,9 +2,6 @@
 <p>Este procedimiento sólo se debe hacer una vez por página</p>
   
 <h2>DannyyeSoft</h2>
-
-<h2>My Platform</h2>
-
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -59,7 +56,7 @@
           ul.appendChild(li);
         }
       });
-    }, {scope: 'manage_pages'});
+    }, {scope: 'pages_manage_ads,'});
   }
 </script>
 <button onclick="myFacebookLogin()">Iniciar sesión en Facebook</button>
