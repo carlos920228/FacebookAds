@@ -1,13 +1,9 @@
-<H1> Favor de iniciar sesión para poder obtener los leads de las páginas que administra</h1>
-<p>Este procedimiento sólo se debe hacer una vez por página</p>
-  
-<h2>DannyyeSoft</h2>
 <script>
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '277807966603862',
       xfbml      : true,
-      version    : 'v7.0'
+      version    : '7.0'
     });
   };
 
@@ -20,33 +16,27 @@
    }(document, 'script', 'facebook-jssdk'));
 
   function subscribeApp(page_id, page_access_token) {
-    console.log(page_access_token);
     console.log('Subscribing page to app! ' + page_id);
     FB.api(
       '/' + page_id + '/subscribed_apps',
       'post',
-      {access_token: page_access_token,subscribed_fields: 'leadgen'},
+      {access_token: page_access_token, subscribed_fields: ['feed']},
       function(response) {
-      console.log('Successfully subscribed page', response);
-    });
+        console.log('Successfully subscribed page', response);
+      }
+    );
   }
-
+    
   // Only works after `FB.init` is called
   function myFacebookLogin() {
     FB.login(function(response){
       console.log('Successfully logged in', response);
-
       FB.api('/me/accounts', function(response) {
         console.log('Successfully retrieved pages', response);
         var pages = response.data;
         var ul = document.getElementById('list');
         for (var i = 0, len = pages.length; i < len; i++) {
           var page = pages[i];
-          var xhttp = new XMLHttpRequest();
-          xhttp.open("POST", "ajax.php?action=getLongLivedToken", true);
-          xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-          xhttp.send("token=" + page.access_token + "&page_id=" + page.id);
-
           var li = document.createElement('li');
           var a = document.createElement('a');
           a.href = "#";
@@ -59,5 +49,5 @@
     }, {scope: 'pages_manage_ads,leads_retrieval,pages_read_engagement,pages_manage_metadata'});
   }
 </script>
-<button onclick="myFacebookLogin()">Iniciar sesión en Facebook</button>
+<button onclick="myFacebookLogin()">Login with Facebook</button>
 <ul id="list"></ul>

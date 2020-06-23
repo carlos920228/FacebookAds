@@ -8,7 +8,7 @@ echo $challenge;
 
 $input = json_decode(file_get_contents('php://input'), true);
 error_log(print_r($input, true));
-ini_set( 'display_errors', 1 );
+//Enviar correo
     error_reporting( E_ALL );
     $from = "noreply@dannyyesoft.mx";
     $to = "cromero@dannyyesoft.mx, carlos.romero@iuv.edu.mx";
